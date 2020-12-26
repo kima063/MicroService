@@ -1,2 +1,2 @@
 # MicroService-ProductService-
-MicroService using ASP.NET , C#
+MicroService using ASP.NET Core , C# , SSMS
