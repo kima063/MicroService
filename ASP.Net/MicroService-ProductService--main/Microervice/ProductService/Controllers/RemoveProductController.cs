@@ -5,22 +5,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductService.Database;
-using ProductService.Database.Entities;
-
 
 namespace ProductService.Controllers
 {
-
     [Route("product/remove")]
     [ApiController]
     public class RemoveProductController : Controller
     {
-
         DatabaseContext db;
+
         public RemoveProductController()
         {
             db = new DatabaseContext();
         }
+
         // POST: RemoveProductController/Delete/5
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)

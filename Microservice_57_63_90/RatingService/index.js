@@ -90,7 +90,7 @@ app.post('/rate', (req, res) => {
                      //res.send(result);
                     //console.log("ekhane"+result);
                      if(!err){
-                         if(exeCount>=2){
+                         if(exeCount>=5){
                             exeCount=0;
                             var Arr=rows[1]
                         

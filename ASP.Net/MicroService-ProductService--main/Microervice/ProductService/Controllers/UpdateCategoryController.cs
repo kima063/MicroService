@@ -25,10 +25,6 @@ namespace ProductService.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Products model)
         {
-            /*if(db.Products.Any(nm => nm.id == model.id))
-            {
-                return StatusCode(StatusCodes.Status200OK, model);
-            }*/
             try
             {
                 Products pID = db.Products.Find(model.id);
@@ -42,7 +38,7 @@ namespace ProductService.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e);
             }
         }
     }
